@@ -1,0 +1,39 @@
+<% if flash[:notice] %>
+    <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
+<%= form_with model: @room do |f| %>
+    <table>
+        <tr>
+            <th><%= f.label :name ,"施設名" %></th>
+            <td><%= f.text_field :name %></td>
+        </tr>
+
+        <tr>
+            <th><%= f.label :intro ,"施設詳細" %></th>
+            <td><%= f.text_field :intro %></td>
+        </tr>
+
+        <tr>
+            <th><%= f.label :end_date ,"終了日" %></th>
+            <td><%= f.date_field :end_date %></td>
+        </tr>
+
+        <tr>
+            <th><%= f.label :all_day ,"終日" %></th>
+            <td><%= f.check_box :all_day %></td>
+        </tr>
+
+        <tr>
+            <th><%= f.label :memo ,"メモ" %></th>
+            <td><%= f.text_area :memo %></td>
+        </tr>
+    </table>
+
+    <div>
+        <ul>
+            <li><%= f.submit "登録完了する"%></li>
+            <li><%= link_to "スケジュール一覧に戻る", :rooms %></li>
+        </ul>
+    </div>
+<% end %>

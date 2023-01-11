@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checkout: 2023-01-11 17:36:53
+  checkin: 2023-01-11 17:36:53
+  people: 1
+
+two:
+  checkout: 2023-01-11 17:36:53
+  checkin: 2023-01-11 17:36:53
+  people: 1
